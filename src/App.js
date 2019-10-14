@@ -1,24 +1,35 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Student from "./components/Student";
+import Teacher from "./components/Teacher";
+
+import students from "./data/students.json";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Teacher name="Lloyd" />
+      <Teacher name="Laura" />
+      <Teacher name="Jurgen" />
+      <Teacher name="Miguel" />
+
+      {
+        students.map((student)=> 
+          <Student 
+            {...student}
+          />
+        )
+        // equivalent to above
+        // students.map((student)=> 
+        //   <Student 
+        //     firstname={student.firstname}
+        //     lastname={student.lastname}
+        //     email={student.email}
+        //   />
+        // )   
+      }
     </div>
   );
 }
