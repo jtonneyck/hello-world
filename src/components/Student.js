@@ -11,7 +11,6 @@ class Student extends React.Component {
     }
 
     clickHandler = ()=>{
-        debugger
         // this.state.count++ do not modify state directly
        this.setState({count: this.state.count + 1})
     }
@@ -23,6 +22,7 @@ class Student extends React.Component {
                 <h1 onClick={this.clickHandler}>Hi, I'm {this.props.firstname} {this.props.lastname}</h1>
                 <p>Write me an email: {this.props.email} </p>
                 <p>count: {this.state.count}</p>
+                <button onClick={()=> {this.props.deleteMe(this.props.email)}}>Delete me</button>
             </div>
         )
     }

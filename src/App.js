@@ -13,15 +13,24 @@ class App extends Component {
   }
 
   handleSearch = (e)=> {
-    debugger
     var searchQuery = e.target.value
 
     var searchResult = this.state.students.filter((student)=>
       student.firstname.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1 || 
       student.lastname.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1
     )
-    debugger
+
     this.setState({filteredStudents: searchResult})
+  }
+
+  deleteStudent = (email)=> {
+    debugger
+    var filteredStudents = this.state.filteredStudents.filter((student)=> {
+      debugger
+      return !(student.email === email)
+    })
+
+    this.setState({filteredStudents: filteredStudents})
   }
 
   render() {
@@ -32,6 +41,7 @@ class App extends Component {
         {
           this.state.filteredStudents.map((student)=> 
             <Student 
+              deleteMe={this.deleteStudent}
               {...student}
             />
           )
