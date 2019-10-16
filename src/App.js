@@ -44,6 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <input onChange={this.handleSearch} type="text"/>
+        
         <div className="students-container">
           {
             this.state.filteredStudents.map((student)=> 
@@ -55,6 +56,7 @@ class App extends Component {
             )
           }
         </div>
+
         <div className="picked-students-container"> 
           <h1>Picked students</h1>
           <ul>
