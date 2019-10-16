@@ -1,7 +1,25 @@
 .student {
-    h1 {
+    width: 50%;
+    background-color: #2e2e2d;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    h3, p {
         color: yellow;
-        font-size: 36px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    button {
+        width: 50%;
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 800;
     }
 }
 

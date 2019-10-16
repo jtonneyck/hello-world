@@ -1,0 +1,27 @@
+.App {
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  box-sizing: border-box;
+
+  input {
+    width: 100%;
+    margin: 10px;
+    height: 35px;
+    text-align: center;
+    font-size: 24px;
+    box-sizing: border-box;
+  }
+
+  .students-container {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .picked-students-container {
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
